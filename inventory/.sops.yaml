@@ -1,0 +1,4 @@
+  # file: .sops.yaml
+  creation_rules:
+    - path_regex: .*group_vars/.*
+      age: "age109fzapgarv59gpyu5tgmwgn7j3hwmfs0dhrz3lrqvjy046jxafnse30kvj"

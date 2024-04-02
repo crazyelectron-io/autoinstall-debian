@@ -1,0 +1,11 @@
+# file: ./debian-deploy.yaml
+# synopsis: Deploy the software and configuration settings for a Debian cluster (to deploy k3s)
+---
+- hosts: all
+  become: true
+  gather_facts: true
+  roles:
+    - role: local/sops
+    - role: debian-base
+    - role: docker
+      when: install_docker | bool

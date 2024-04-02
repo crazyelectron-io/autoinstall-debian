@@ -1,0 +1,10 @@
+# Include the 'debian-base` role from GitHub
+- src: git@github.com:crazyelectron-io/ansible-role-debian_base.git
+  scm: git
+  version: main
+  name: debian-base
+# Include the 'docker` role from GitHub
+- src: git@github.com:crazyelectron-io/ansible-role-docker.git
+  scm: git
+  version: master
+  name: docker

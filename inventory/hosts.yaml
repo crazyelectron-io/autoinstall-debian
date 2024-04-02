@@ -1,0 +1,53 @@
+# dns_master:
+#   hosts:
+#     gandalf:
+#       ansible_port: 22
+#       ansible_host: 10.0.0.8
+# dns_slave:
+#   hosts:
+#     sauron:
+#       ansible_port: 22
+#       ansible_host: 10.0.0.9
+master:
+  hosts:
+    k3s-prod-m01:
+      ansible_port: 22
+      ansible_host: 10.0.0.11
+      nic1: eno1
+      nic2: eno3
+      nic3: eno2
+      nic4: eno4
+      cidr_vlan0: "10.0.0.11/24"
+      gateway: 10.0.0.1
+      cidr_vlan100: "10.100.0.11/22"
+    k3s-prod-m02:
+      ansible_port: 22
+      ansible_host: 10.0.0.12
+      nic1: eno1
+      nic2: eno3
+      nic3: eno2
+      nic4: eno4
+      cidr_vlan0: "10.0.0.12/24"
+      gateway: 10.0.0.1
+      cidr_vlan100: "10.100.0.12/22"
+    k3s-prod-m03:
+      ansible_port: 22
+      ansible_host: 10.0.0.13
+      nic1: eno1
+      nic2: eno3
+      nic3: eno2
+      nic4: eno4
+      cidr_vlan0: "10.0.0.13/24"
+      gateway: 10.0.0.1
+      cidr_vlan100: "10.100.0.13/22"
+worker:
+  hosts:
+    k3s-prod-w01:
+      ansible_port: 22
+      ansible_host: 10.0.0.14
+    k3s-prod-w02:
+      ansible_port: 22
+      ansible_host: 10.0.0.15
+    k3s-prod-w03:
+      ansible_port: 22
+      ansible_host: 10.0.0.16
